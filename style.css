@@ -1,0 +1,260 @@
+/* ===========================
+   RESET & GLOBAL
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   HEADER (tetap modern)
+=========================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 153, 204, 0.9);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.brand {
+  color: #ffeb3b;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+/* ===========================
+   HERO SECTION — FULLSCREEN 
+=========================== */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/laundry-bg.png') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 40px;
+}
+
+button {
+  background: #0077aa;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005f88;
+}
+
+/* ===========================
+   BAGIAN LAIN (About, dll)
+=========================== */
+section.about {
+  background: #fff;
+  border-radius: 12px;
+  margin: 80px auto;
+  max-width: 900px;
+  padding: 100px 20px 60px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-container img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-container p {
+  max-width: 450px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: #0099cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+ /* ===========================
+   UMUM UNTUK SEMUA SECTION KECUALI HERO
+=========================== */
+section:not(.hero) {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  margin: 60px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   SERVICES SECTION (LAYANAN)
+=========================== */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 230px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background: #e6f7ff;
+}
+
+.service-card .icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   CONTACT SECTION - RAPI DAN MODERN
+=========================== */
+form {
+  max-width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form h2 {
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+form label {
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: none;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0099cc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 153, 204, 0.3);
+}
+
+button {
+  background: #0099cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0077aa;
+}
